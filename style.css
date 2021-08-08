@@ -1,0 +1,225 @@
+/* 
+Reference:
+1) header: https://www.tiny.cloud/blog/neon-fonts-and-glowing-text-get-started-in-two-steps/
+2) navbar: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_content__nav_dropdown 
+3) toggle: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_hide_show
+*/
+
+.container {
+    margin: 0 auto;
+    max-width: 1240px;
+    color: white;
+}
+
+.header .header_title h1 {
+    font-size: 50px;
+    color: #70b5be;
+    text-align: center;
+    text-shadow: 0 0 5px #fff, 
+                0 0 10px #fff, 
+                0 0 15px #011e26, 
+                0 0 20px #011e26, 
+                0 0 25px #011e26, 
+                0 0 30px #011e26, 
+                0 0 35px #011e26;
+}
+
+.header__sns {
+    text-align: right;
+    font-size: 25px;
+    color: #0e5863;
+}
+
+.toggle {
+    font-size: 20px;
+    text-align: right;
+    display: none;
+    color: teal;
+}
+
+.content {
+    display: flex;
+}
+
+.content__main {
+    width: 75%;
+    background-color: #1a2224;
+}
+
+.content__main__top {
+    position: relative;
+    text-align: center;
+}
+
+.content__main__top__img1 {
+    width: 100%;
+    height: 300px;
+}
+  
+.content__main__top__text {
+    padding: 10px 15px 0 15px;
+    position: absolute;
+    bottom: 4px;
+    font-size: 45px;
+    color: white;
+    background-color: #000000;
+}
+
+.content__main__text--display-flex {
+    display: flex;
+}
+
+.content__main__text__img2 {
+    width: 300px;
+    height: 250px;
+}
+
+.content__main__text__img3 {
+    width: 400px;
+    height: 300px;
+}
+
+.content__main__text__img4 {
+    width: 100%;
+    height: 400px;
+}
+
+.content__main__subtitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.content__main__section {
+    margin: 30px;
+}
+
+.content__main__section3__text {
+    padding: 0 20px 0 20px;
+}
+
+.content__main__section__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.content__nav__title {
+    padding-left: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+hr {
+    border: 2px solid #0c4e5a;
+}
+
+.content__nav {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #0d5966;
+    overflow-x: hidden;
+    padding-top: 20px;
+    display: block;
+    width: 25%;
+}
+  
+.content__nav a, .content__nav__dropdown {
+    padding: 6px 8px 6px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.content__nav a:hover, .content__nav__dropdown:hover {
+    background-color: #1a9eb3;
+}
+    
+.active {
+    background-color: #1a9eb3;
+    color: white;
+}
+  
+.content__nav__dropdown__manus {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+}
+  
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+.content__nav a:focus {
+    background-color: #1a9eb3;
+}
+
+@media only screen and (max-width: 500px) {
+    .header .header_title h1 {
+        font-size: 30px;
+    }
+
+    .header__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content__nav {
+        width: 100%;
+    }
+    
+    .content__main {
+        width: 100%;
+    }
+
+    .content__main__text--display-flex {
+        flex-direction: column;
+    }
+
+    .content__main__text__img2 {
+        width: 100%;
+    }
+
+    .content__main__text__img3 {
+        width: 100%;
+    }
+
+    .content__main__text__img4 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .content__main__section3__text {
+        padding: 0;
+    }
+
+    .toggle {
+        font-size: 20px;
+        text-align: right;
+        display: block;
+    }
+
+    .content__nav {
+        display: none;
+        height: 420px;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .content__nav {
+        display: block !important;
+    }
+}
